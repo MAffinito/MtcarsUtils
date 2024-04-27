@@ -1,0 +1,156 @@
+---
+title: "Module 12 R Markdown"
+author: "Mike Affinito"
+date: "2024-04-01"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+
+
+```{r Install}
+# MtcarsUtils Package
+
+## Introduction
+
+#MtcarsUtils is an R package providing basic functions for analyzing the mtcars dataset, which contains information about various car models.
+
+## Installation
+
+#To install the MtcarsUtils package, you can use the following command in R:
+
+
+install.packages("devtools")
+devtools::install_github("MAffinito/MtcarsUtils")
+```
+
+```{r Usage}
+#To use the MtcarsUtils package, load it into your R session using the library() function:
+
+library(MtcarsUtils)
+```
+
+```{r Function 1: print_mtcars()}
+##Description
+#This function prints the mtcars dataset.
+
+##Usage
+
+# Load MTCARS dataset
+data(mtcars)
+
+force(mtcars)
+##Arguments
+#None.
+
+##Value
+#The mtcars dataset.
+
+
+##Examples
+  print_mtcars <- function() {
+  print(mtcars)
+}
+
+print_mtcars()
+
+# Output: Displays the mtcars dataset
+```
+
+```{r Function 2: summary_stats()}
+##Function 2: summary_stats()
+##Description
+#This function provides summary statistics for numeric variables in the mtcars dataset.
+
+
+##Usage
+
+summary_stats()
+
+##Arguments
+#data: The mtcars dataset.
+
+##Value
+#Summary statistics (mean, median, min, max, etc.) for numeric variables.
+
+
+
+##Examples
+
+summary_stats <- function() {
+  # Load MTCARS dataset
+  data(mtcars)
+  
+  summary(mtcars)
+}
+
+summary_stats()
+# Output: Summary statistics for numeric variables in the mtcars dataset
+```
+
+```{r Function 3: plot_mpg_vs_hp()}
+##Description
+#This function creates a scatter plot of miles per gallon (mpg) against horsepower (hp) for the cars in the mtcars dataset.
+
+
+##Usage
+
+plot_mpg_vs_hp(mtcars_data)
+
+##Arguments
+#data: The mtcars dataset.
+
+##Value
+#A scatter plot.
+
+##Examples
+plot_mpg_vs_hp <- function(data) {
+  library(ggplot2)
+  ggplot(data, aes(x = hp, y = mpg)) +
+    geom_point() +
+    labs(x = "Horsepower (hp)", y = "Miles Per Gallon (mpg)",
+         title = "Scatter Plot of MPG vs HP")
+}
+
+mtcars_data <- get_mtcars()
+plot_mpg_vs_hp(mtcars_data)
+# Output: Scatter plot of mpg against hp
+```
+
+```{r Function 4: plot_mpg_boxplot()}
+##Description
+#This function creates a boxplot of miles per gallon (mpg) for the cars in the mtcars dataset using ggplot2.
+
+
+##Usage
+
+plot_mpg_boxplot(mtcars_data)
+
+##Arguments
+#data: The mtcars dataset.
+
+##Value
+#A boxplot.
+
+##Examples
+
+library(ggplot2)
+
+plot_mpg_boxplot <- function(data) {
+  ggplot(data, aes(x = "", y = mpg)) +
+    geom_boxplot(fill = "skyblue", color = "blue") +
+    labs(x = NULL, y = "Miles Per Gallon (mpg)", 
+         title = "Boxplot of Miles Per Gallon") +
+    theme_minimal()
+}
+
+mtcars_data <- get_mtcars()
+plot_mpg_boxplot(mtcars_data)
+# Output: Boxplot of mpg
+
+```
+
+```{r conclusion}
+#The MtcarsUtils package provides simple yet useful functions for analyzing the mtcars dataset, making it easier for users to explore and understand the data.
+```
