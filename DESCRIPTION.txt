@@ -1,0 +1,8 @@
+Package: Friedman
+Title: Tools for Friedman Test Analysis
+Version: 0.1.0.9000
+Authors@R: "Mike Affinito <maffinito@usf.edu> [aut, cre]"
+Description: The Friedman package provides a set of tools for conducting Friedman test analysis in R. This includes functions for performing the Friedman test and generating visualizations such as plots of the mean ranks. These tools are useful for researchers and analysts working with data.
+Depends: R (>= 3.1.2)
+License: CC0
+LazyData: true
