@@ -8,3 +8,23 @@ Example:
 
 mtcars_data <- get_mtcars()
 head(mtcars_data)
+
+2. summary_stats()
+Description: Provides summary statistics for numeric variables in the mtcars dataset.
+Usage: summary_stats(data)
+Arguments: data - The mtcars dataset.
+Value: Summary statistics (mean, median, min, max, etc.) for numeric variables.
+Example:
+
+mtcars_data <- get_mtcars()
+summary_stats(mtcars_data)
+
+. plot_mpg_vs_hp()
+Description: Creates a scatter plot of miles per gallon (mpg) against horsepower (hp) for the cars in the mtcars dataset.
+Usage: plot_mpg_vs_hp(data)
+Arguments: data - The mtcars dataset.
+Value: A scatter plot.
+Example:
+
+mtcars_data <- get_mtcars()
+plot_mpg_vs_hp(mtcars_data)
