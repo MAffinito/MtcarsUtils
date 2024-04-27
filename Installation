@@ -3,3 +3,8 @@ To install the MtcarsUtils package, you can use the devtools package to install 
 
 install.packages("devtools")
 devtools::install_github("MAffinito/MtcarsUtils")
+
+Also install ggplot 2
+
+install.packages("ggplot2") 
+library(ggplot2)
