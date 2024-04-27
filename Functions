@@ -1,30 +1,78 @@
 Functions
 1. get_mtcars()
-Description: Returns the mtcars dataset.
-Usage: get_mtcars()
+Description: Prints the mtcars dataset.
+Usage: data(mtcars)   force(mtcars)
 Arguments: None
 Value: The mtcars dataset.
 Example:
 
-mtcars_data <- get_mtcars()
-head(mtcars_data)
+print_mtcars <- function() {
+  print(mtcars)
+}
+
+print_mtcars()
+
+Output: Displays the mtcars dataset
+
 
 2. summary_stats()
 Description: Provides summary statistics for numeric variables in the mtcars dataset.
-Usage: summary_stats(data)
+Usage: summary_stats()
 Arguments: data - The mtcars dataset.
 Value: Summary statistics (mean, median, min, max, etc.) for numeric variables.
 Example:
 
-mtcars_data <- get_mtcars()
-summary_stats(mtcars_data)
+summary_stats <- function() {
+  # Load MTCARS dataset
+  data(mtcars)
+  
+  summary(mtcars)
+}
 
-. plot_mpg_vs_hp()
+summary_stats()
+
+Output: Summary statistics for numeric variables in the mtcars dataset
+
+
+3. plot_mpg_vs_hp()
 Description: Creates a scatter plot of miles per gallon (mpg) against horsepower (hp) for the cars in the mtcars dataset.
-Usage: plot_mpg_vs_hp(data)
+Usage: plot_mpg_vs_hp(mtcars_data)
 Arguments: data - The mtcars dataset.
 Value: A scatter plot.
 Example:
 
+plot_mpg_vs_hp <- function(data) {
+  library(ggplot2)
+  ggplot(data, aes(x = hp, y = mpg)) +
+    geom_point() +
+    labs(x = "Horsepower (hp)", y = "Miles Per Gallon (mpg)",
+         title = "Scatter Plot of MPG vs HP")
+}
+
 mtcars_data <- get_mtcars()
 plot_mpg_vs_hp(mtcars_data)
+
+Output: Scatter plot of mpg against hp
+
+
+4. 
+Description: This function creates a boxplot of miles per gallon (mpg) for the cars in the mtcars dataset using ggplot2.
+Usage: plot_mpg_boxplot(data)
+Arguments: None
+Value: A boxplot
+Example:
+
+library(ggplot2)
+
+plot_mpg_boxplot <- function(data) {
+  ggplot(data, aes(x = "", y = mpg)) +
+    geom_boxplot(fill = "skyblue", color = "blue") +
+    labs(x = NULL, y = "Miles Per Gallon (mpg)", 
+         title = "Boxplot of Miles Per Gallon") +
+    theme_minimal()
+}
+
+mtcars_data <- get_mtcars()
+plot_mpg_boxplot(mtcars_data)
+
+Output: Boxplot of mpg
