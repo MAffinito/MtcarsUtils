@@ -1,0 +1,10 @@
+Functions
+1. get_mtcars()
+Description: Returns the mtcars dataset.
+Usage: get_mtcars()
+Arguments: None
+Value: The mtcars dataset.
+Example:
+
+mtcars_data <- get_mtcars()
+head(mtcars_data)
