@@ -1,2 +1,2 @@
 # MtcarsUtils
-The Friedman package provides a set of tools for conducting Friedman test analysis in R. This includes functions for performing the Friedman test and generating visualizations such as plots of the mean ranks. These tools are useful for researchers and analysts working with data.
+The MtcarsUtils package offers a collection of tools tailored for test analysis in R. These tools encompass functions dedicated to executing various tests and generating informative visualizations, such as plots illustrating mean ranks. Designed to streamline the analytical process, these utilities prove invaluable for researchers and analysts navigating the complexities of data analysis tasks.
